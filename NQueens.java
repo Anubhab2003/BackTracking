@@ -1,8 +1,10 @@
 public class NQueens {
+    static int count=0;
     public static void nqueen(char board[][], int row) {
         // Base Case
         if (row == board.length) {
             printboard(board);
+            count++;
             return;
         }
 
@@ -58,5 +60,6 @@ public class NQueens {
             }
         }
         nqueen(board, 0);
+        System.out.println("Total ways to count"+count);
     }
 }
